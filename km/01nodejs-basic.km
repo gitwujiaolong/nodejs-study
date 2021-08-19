@@ -1,0 +1,104 @@
+{
+    "root": {
+        "data": {
+            "id": "cdn9q64ryr40",
+            "created": 1629353825638,
+            "text": "nodejs"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cdnaui8809s0",
+                    "created": 1629356986534,
+                    "text": "基础",
+                    "expandState": "expand"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cdn9qjq5ofk0",
+                            "created": 1629353855229,
+                            "text": "fs"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cdn9ryn62uo0",
+                                    "created": 1629353966064,
+                                    "text": "stream",
+                                    "note": "* 用于处理文件、图片\n* demo1 读取图片01，另存为图片02\n```  javascript\nconst fs = require('fs')\ncosnt rs = fs.createReadStream('./01.jpg')\nconst ws = fs.createWriteStream('./02.jpg')\nrs.pip(ws);\n    \n```\n\n``` javascript\nconst {url, method, headers} = request;\n\nelse if (method === 'GET' && headers.accept.indexOf('image/*') !== -1) { \n\nfs.createReadStream('.'+url).pipe(response); \n\n}\n```"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cdn9s1ebxo80",
+                                    "created": 1629353972060,
+                                    "text": "readFile",
+                                    "note": "* 异步读取文件\n``` javascript\nfs.readFile('./xxx.js',(err,data)=>{\n\tif(err) throw err;\n    console.log(data)\n})\n```"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cdn9s3rqxbk0",
+                                    "created": 1629353977225,
+                                    "text": "readFileSync",
+                                    "note": "* 同步读取文件\n``` javascript\nconst data =fs.readFileSync('./conf.js')\n```"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cdn9sctqpnk0",
+                            "created": 1629353996936,
+                            "text": "utils"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cdn9sgs9mx40",
+                                    "created": 1629354005554,
+                                    "text": "promisify",
+                                    "note": "* 将原始api包裹成promise\n``` javascript\nconst {promisefy} = require('util')\nconst readFile = promisefy(fs.readFile)\nconst data = await readFile('./index.html')\n```"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cdn9uti2i7k0",
+                            "created": 1629354189964,
+                            "text": "fsp",
+                            "note": "* fs Promise api for node v10+\n```  javascript \nconst fsp = require('fs').promises;\nconst data =await fsp.readFile('./xxx.js');\n\n```"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cdna6ul2mxs0",
+                            "created": 1629355132693,
+                            "text": "Buffer",
+                            "note": "* Buffer - 用于在TCP流、文件系统操作、以及其他上下文中与八位字节流进行交互。八位字节组成的数组，可以有效在JS中存储二进制。\n\n``` javascript\n// 创建一个长度为10字节以0填充的Buffer\n\nconst buf1 = Buffer.alloc(10)\nconsole.log(buf1) \n\nconst buf2 = Buffer.from('a')\nconsole.log(buf2,buf2.toString()) \n\nconst buf3 = Buffer.from('中文')\nconsole.log(buf3)\n\nconst buf4 = Buffer.concat([buf2,buf3])\nconsole.log(buf4,buf4.toString())\n```"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cdnautesni00",
+                    "created": 1629357010876,
+                    "text": "cli-test"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-purple",
+    "version": "1.4.43"
+}
