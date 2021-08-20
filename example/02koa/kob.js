@@ -28,7 +28,7 @@ class KOB {
           return Promise.resolve();
         }
         return Promise.resolve(
-          fn(ctx, () => dispatch(i + 1)) // fn(上下文，nextCallback)
+          fn(ctx, () => dispatch(i + 1)) // fn(上下文，nextCallback)  fn(ctx,()=>fn(ctx,()=>null))
         );
       }
     };
