@@ -1,0 +1,35 @@
+{
+    "root": {
+        "data": {
+            "id": "cdo4kv2k86w0",
+            "created": 1629440864146,
+            "text": "koa"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cdo4ld5zayg0",
+                    "created": 1629440903534,
+                    "text": "koa-static",
+                    "layout_right_offset": {
+                        "x": -3,
+                        "y": -64
+                    }
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cdo4lr1iqq00",
+                    "created": 1629440933740,
+                    "text": "koa-router",
+                    "note": "``` javascript\nconst router = require('koa-router')()\n\nrouter.get('/index',async ctx=>{\n\tctx.body = 'index page'\n})\n\napp.use(router.routes)\n```"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-purple",
+    "version": "1.4.43"
+}
